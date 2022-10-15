@@ -18,7 +18,7 @@ def main():
     parser.add_argument("--model_type", type=str, default="bert")
     parser.add_argument("--model_name_or_path", type=str, default="bert-base-cased")
     parser.add_argument("--do_lower_case", action="store_true")
-    parser.add_argument('--data_dir', type = str, default =  "docred_data")
+    parser.add_argument('--data_dir', type = str, default =  "dataset")
     parser.add_argument('--output_dir', type = str, default = "prepro_data")
     parser.add_argument('--max_seq_length', type = int, default = 512)
 

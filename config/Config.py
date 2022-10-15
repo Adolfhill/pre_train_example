@@ -392,7 +392,7 @@ class Config(object):
 
         train_dataset = MyDataset(self.train_prefix, self.data_path, self.h_t_limit)
         train_sampler = RandomSampler(train_dataset)
-        train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=self.batch_size, collate_fn=self.get_train_batch, num_workers=2)
+        train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=self.batch_size, collate_fn=self.get_train_batch, num_workers=0)
 
         bert_model = MODEL_CLASSES[model_type].from_pretrained(model_name_or_path)
 
